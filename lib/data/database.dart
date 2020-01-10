@@ -118,7 +118,7 @@ class DatabaseHelper {
     return result;
   }
 
-  Future<int> deleteNote(Task task) async {
+  Future<int> deleteNote(Note note) async {
     Database database = await this.database;
     var result =
         await database.delete(noteTable, where: '$noteID', whereArgs: [noteID]);

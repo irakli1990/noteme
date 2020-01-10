@@ -3,9 +3,10 @@ class Task {
   String name;
   String addTime;
   String rememberTime;
+  int status;
   int priority;
 
-  Task({this.id, this.name, this.addTime, this.rememberTime, this.priority});
+  Task({this.id, this.name, this.addTime, this.rememberTime, this.priority,this.status});
 
   Task.fromJson(Map<String, dynamic> json) {
     id = json['id'];
@@ -13,6 +14,7 @@ class Task {
     addTime = json['addtime'];
     rememberTime = json['remembertime'];
     priority = json['priority'];
+    status = json['status'];
   }
 
   Map<String, dynamic> toJson() {
@@ -22,6 +24,7 @@ class Task {
     data['addtime'] = this.addTime;
     data['remembertime'] = this.rememberTime;
     data['priority'] = this.priority;
+    data['status'] = this.status;
     return data;
   }
 }
