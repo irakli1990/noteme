@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:noteme/data/database.dart';
-import './bloc.dart';
+import 'bloc.dart';
 
 class TaskBloc extends Bloc<TaskEvent, TaskState> {
   DatabaseHelper databaseHelper;
